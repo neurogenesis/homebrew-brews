@@ -19,7 +19,7 @@ class Imux < Formula
   end
 
   def install
-    mkdir "$HOME/.imux"
+    mkdir "#{ENV["HOME"]}/.imux"
 
     ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python2.7/site-packages"
 
