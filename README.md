@@ -1,6 +1,6 @@
 ## Introduction
 
-My custom [homebrew](https://github.com/Homebrew/homebrew) tap.
+My personal [homebrew](https://github.com/Homebrew/homebrew) tap.
 
 ## Projects
 
