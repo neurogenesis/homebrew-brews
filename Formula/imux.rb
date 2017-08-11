@@ -1,7 +1,15 @@
 class Imux < Formula
-  # desc "iTermocil allows you setup pre-configured layouts of panes in iTerm2."
+  desc "imux manages iTerm2 windows/tabs/panes like tmuxinator."
   homepage "https://github.com/neurogenesis/imux"
-  head "https://github.com/neurogenesis/imux.git"
+  version "0.0.1"
+
+  devel do
+  end
+
+  head do
+    url "https://github.com/neurogenesis/imux.git", :using => :git, :branch => "master"
+  end
+
 #  url "https://github.com/neurogenesis/imux/archive/0.0.1.tar.gz"
 #  sha256 ""
 
@@ -11,6 +19,8 @@ class Imux < Formula
   end
 
   def install
+    mkdir "~/.imux"
+
     ENV.prepend_create_path "PYTHONPATH", libexec/"vendor/lib/python2.7/site-packages"
 
     %w[PyYAML].each do |r|
